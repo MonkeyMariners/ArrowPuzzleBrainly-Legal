@@ -1,10 +1,10 @@
-# Arrow Puzzle Brainly — public site
+# Arrow Puzzle Brainly — legal & public pages
 
 The public pages for the Android game **Arrow Puzzle Brainly**: policies,
 support and the founder page. Plain static HTML, no build step at serve time,
 no cookies, no trackers, no third-party scripts.
 
-**Live site:** https://onxmariners.github.io/arrow-puzzle-brainly-site/
+**Live site:** https://monkeymariners.github.io/ArrowPuzzleBrainly-Legal/
 
 ## Pages
 
