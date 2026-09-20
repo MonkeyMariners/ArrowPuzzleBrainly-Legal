@@ -11,6 +11,8 @@ const LINKEDIN = 'https://www.linkedin.com/in/monkeymariners/';
 const ADDRESS =
   'Vill- Sukar Beg Chak, P.O + P.S- Khusrupur, Patna, Bihar 803202, India';
 const APP = 'Arrow Puzzle Brainly';
+// The name the app is published and contracted under.
+const PUBLISHER = 'Monkey Mariners';
 const PACKAGE = 'com.onxmariners.arrowpuzzlebrainly';
 
 const NAV = [
@@ -125,9 +127,9 @@ ${body}
 <footer class="site"><div class="wrap">
   <div class="fl">${foot}</div>
   <p><strong>${APP}</strong> — Think. Tap. Escape.<br>
-  Published by Praduman Kumar (onXmariners). Package <code>${PACKAGE}</code>.</p>
+  Published by ${PUBLISHER}. Package <code>${PACKAGE}</code>.</p>
   <address>${ADDRESS}<br>Email: <a href="mailto:${EMAIL}">${EMAIL}</a></address>
-  <p style="margin-top:14px">© 2026 Praduman Kumar. All rights reserved.</p>
+  <p style="margin-top:14px">© 2026 ${PUBLISHER}. All rights reserved.</p>
 </div></footer>
 </body>
 </html>
@@ -137,7 +139,7 @@ ${body}
 const contact = `<h2>Contact us</h2>
 <p>Questions about this document? Write to
 <a href="mailto:${EMAIL}">${EMAIL}</a> and we will reply within 7 working days.</p>
-<address><strong>Praduman Kumar</strong><br>${ADDRESS}<br>
+<address><strong>${PUBLISHER}</strong><br>${ADDRESS}<br>
 Email: <a href="mailto:${EMAIL}">${EMAIL}</a><br>
 LinkedIn: <a href="${LINKEDIN}" rel="noopener">monkeymariners</a></address>`;
 
@@ -155,7 +157,7 @@ pages['index.html'] = {
     <div class="tagline">Think. Tap. Escape.</div>
     <h1>${APP}</h1>
     <p style="margin:6px 0 0">Every arrow has a way out. Find the right order.<br>
-    655 levels · 4 colour themes · plays fully offline · free to play.</p>
+    1,100 levels · 4 colour themes · plays fully offline · free to play.</p>
   </div>
 </div>
 
@@ -165,9 +167,11 @@ pages['index.html'] = {
   cell between it and the edge is empty. Tap a free arrow and it flies away,
   opening the path for the next one. Tap a blocked arrow and it costs one of your
   three hearts. Clear the whole board to finish the level.</p>
-  <p>Every level is generated so that a complete solution always exists, and
-  removing an arrow can only ever free other arrows — so you can never reach a
-  dead end.</p>
+  <p>Arrows run across several cells and bend into L and U shapes; one leaves
+  when the lane in front of its head is clear, sliding out head first with its
+  body following. Every level is generated so that a complete solution always
+  exists, and removing an arrow can only ever free other arrows — so you can
+  never reach a dead end.</p>
 </div>
 
 <div class="card">
@@ -199,7 +203,7 @@ pages['index.html'] = {
 
 <div class="card">
   <h2>Contact</h2>
-  <address><strong>Praduman Kumar</strong><br>${ADDRESS}<br>
+  <address><strong>${PUBLISHER}</strong><br>${ADDRESS}<br>
   Email: <a href="mailto:${EMAIL}">${EMAIL}</a><br>
   LinkedIn: <a href="${LINKEDIN}" rel="noopener">monkeymariners</a></address>
 </div>`,
@@ -433,7 +437,7 @@ pages['terms-and-conditions.html'] = {
 
 <div class="card">
 <p>These Terms and Conditions ("Terms") form an agreement between you and
-<strong>Praduman Kumar</strong>, ${ADDRESS} ("we", "us"), covering your use of
+<strong>${PUBLISHER}</strong>, ${ADDRESS} ("we", "us"), covering your use of
 the mobile game ${APP} (package <code>${PACKAGE}</code>) and this website
 (together, the "Service"). Please read them before using the Service. By
 installing, opening or using the App you accept these Terms. If you do not accept

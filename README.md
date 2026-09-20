@@ -51,8 +51,8 @@ changes, so every page shows the correct date.
 
 ## Contact
 
-Praduman Kumar — Vill- Sukar Beg Chak, P.O + P.S- Khusrupur, Patna, Bihar
+Monkey Mariners — Vill- Sukar Beg Chak, P.O + P.S- Khusrupur, Patna, Bihar
 803202, India · zamefy@gmail.com ·
 [LinkedIn](https://www.linkedin.com/in/monkeymariners/)
 
-© 2026 Praduman Kumar. The page content is not licensed for reuse.
+© 2026 Monkey Mariners. The page content is not licensed for reuse.
