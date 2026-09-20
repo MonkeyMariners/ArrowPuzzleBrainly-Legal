@@ -279,9 +279,9 @@ pages['privacy-policy.html'] = {
 
 <div class="card">
 <p>This Privacy Policy explains how ${APP} (the "App", package
-<code>${PACKAGE}</code>) handles information. The App is published by Praduman
-Kumar ("we", "us"), ${ADDRESS}. By installing or using the App you agree to this
-policy.</p>
+<code>${PACKAGE}</code>) handles information. The App is published by
+${PUBLISHER} ("we", "us"), ${ADDRESS}. By installing or using the App you agree
+to this policy.</p>
 
 <div class="note">In short: the game needs no account, works offline, and keeps
 your progress on your own phone. The only data that leaves your device is what
