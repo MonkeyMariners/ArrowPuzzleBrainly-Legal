@@ -18,6 +18,7 @@ no cookies, no trackers, no third-party scripts.
 | Terms of Use | `terms-of-use.html` | Day-to-day rules, fair play |
 | Refund Policy | `refund-policy.html` | Google Play refund process |
 | Rewards & Earnings | `earn-money.html` | What rewarded ads give you |
+| Data & Account Deletion | `data-deletion.html` | **Play Console → Data deletion URL** |
 | Support | `support.html` | **Play Console → Support URL** |
 
 The app links to these pages from **Settings → Legal & policies** and
@@ -52,7 +53,7 @@ changes, so every page shows the correct date.
 ## Contact
 
 Monkey Mariners — Vill- Sukar Beg Chak, P.O + P.S- Khusrupur, Patna, Bihar
-803202, India · zamefy@gmail.com ·
+803202, India · monkeymariners@gmail.com ·
 [LinkedIn](https://www.linkedin.com/in/monkeymariners/)
 
 © 2026 Monkey Mariners. The page content is not licensed for reuse.

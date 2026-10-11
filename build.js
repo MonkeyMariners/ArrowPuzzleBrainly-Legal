@@ -5,8 +5,8 @@ const fs = require('fs');
 const path = require('path');
 
 const OUT = __dirname;
-const UPDATED = '20 September 2026';
-const EMAIL = 'zamefy@gmail.com';
+const UPDATED = '11 October 2026';
+const EMAIL = 'monkeymariners@gmail.com';
 const LINKEDIN = 'https://www.linkedin.com/in/monkeymariners/';
 const ADDRESS =
   'Vill- Sukar Beg Chak, P.O + P.S- Khusrupur, Patna, Bihar 803202, India';
@@ -24,6 +24,7 @@ const NAV = [
   ['terms-of-use.html', 'Use'],
   ['refund-policy.html', 'Refunds'],
   ['earn-money.html', 'Rewards'],
+  ['data-deletion.html', 'Data Deletion'],
   ['support.html', 'Support'],
 ];
 
@@ -157,7 +158,7 @@ pages['index.html'] = {
     <div class="tagline">Think. Tap. Escape.</div>
     <h1>${APP}</h1>
     <p style="margin:6px 0 0">Every arrow has a way out. Find the right order.<br>
-    1,100 levels · 4 colour themes · plays fully offline · free to play.</p>
+    2,200 levels · 4 colour themes · plays fully offline · free to play.</p>
   </div>
 </div>
 
@@ -196,6 +197,7 @@ pages['index.html'] = {
     <a class="tile" href="terms-of-use.html"><b>Terms of Use</b><span>Rules for using the game and this site</span></a>
     <a class="tile" href="refund-policy.html"><b>Refund Policy</b><span>How refunds work for any purchase</span></a>
     <a class="tile" href="earn-money.html"><b>Rewards &amp; Earnings</b><span>What rewarded ads do and do not give you</span></a>
+    <a class="tile" href="data-deletion.html"><b>Data Deletion</b><span>How to clear progress and request data removal</span></a>
     <a class="tile" href="about-founder.html"><b>About the Founder</b><span>Who builds this</span></a>
     <a class="tile" href="support.html"><b>Support</b><span>Report a bug, ask a question</span></a>
   </div>
@@ -307,21 +309,21 @@ never leaves your phone and is deleted when you uninstall the App:</p>
 or by uninstalling the App.</p>
 
 <h2>3. Analytics</h2>
-<p>We record anonymous gameplay events — for example that a level was started or
-completed, that a hint was used, or that a theme was selected — so we can balance
-difficulty and improve the design. These events contain no name, email, phone
-number, device identifier or any other information that identifies you, and they
-are not linked to your identity or combined with data from other sources.</p>
+<p>Gameplay events (for example: a level started, a level completed, or a hint used)
+are processed locally in temporary device memory to balance gameplay difficulty.
+The App does not connect to external analytics backends or cloud analytics servers.
+These events contain no personal identifiers, are never transmitted to us, and are
+not linked to your personal identity.</p>
 
 <h2>4. Advertising</h2>
-<p>The App shows a small number of ads, including optional rewarded videos that
-you choose to watch in exchange for in-game hints or an extra heart. Ads are
-delivered by <strong>Google AdMob</strong>.</p>
-<p>To select and measure ads, AdMob may access your device's <strong>advertising
-ID</strong> and technical information such as device type, operating system
-version, coarse location derived from your IP address, and whether an ad was
-shown or clicked. We never receive your advertising ID ourselves, and we cannot
-use it to identify you.</p>
+<p>The App shows occasional ads, including optional rewarded videos that you choose
+to watch in exchange for in-game hints or an extra heart. Ads are delivered by
+<strong>Google AdMob</strong>.</p>
+<p>To select and measure ads, AdMob may access your device's <strong>advertising ID</strong>
+and technical device information (such as device model, OS version, diagnostic performance,
+and coarse location derived from IP). We never receive your advertising ID ourselves, and
+we do not link it to any personal identity. All network communications by the Google Mobile Ads SDK
+are encrypted in transit over HTTPS.</p>
 <p>You control that identifier. On Android, open
 <em>Settings → Privacy → Ads</em> to reset it or to opt out of personalised
 advertising entirely. The game remains fully playable either way.</p>
@@ -351,17 +353,18 @@ children. If you believe a child has provided us with personal data, contact
 parties other than the advertising provider described in section 4.</p>
 
 <h2>8. Security</h2>
-<p>Because the App keeps your data on your own device and transmits nothing to us,
-there is no account of yours for us to lose. Ad requests are transmitted over
-encrypted connections by the Google SDK.</p>
+<p>Because the App keeps your data on your own device and transmits nothing to our
+own servers, there is no account of yours for us to lose or compromise. All third-party
+ad requests are transmitted over encrypted HTTPS connections by the Google SDK.</p>
 
-<h2>9. Your rights</h2>
+<h2>9. Your rights &amp; Data Deletion</h2>
 <p>You can delete all data the App holds about you at any moment by resetting
-progress or uninstalling. If you are in a region with data-protection rights such
-as the GDPR or the Indian DPDP Act and you wish to make a request, write to
-<a href="mailto:${EMAIL}">${EMAIL}</a>. Since we hold no personal data
-identifying you, in most cases the answer will simply be that there is nothing
-stored on our side.</p>
+progress in <em>Settings → Reset progress</em>, clearing device storage, or uninstalling
+the App. For full step-by-step instructions and request procedures, please see our dedicated
+<a href="data-deletion.html"><strong>Data &amp; Account Deletion Policy</strong></a>.</p>
+<p>If you have contacted us by email and wish to request deletion of support correspondence,
+or if you are in a jurisdiction such as GDPR or the Indian DPDP Act, write to
+<a href="mailto:${EMAIL}">${EMAIL}</a> and we will process your request within 30 days.</p>
 
 <h2>10. Changes</h2>
 <p>If this policy changes, the new version will appear on this page with an
@@ -792,6 +795,81 @@ not happen. If it does, tell us the device model and, if you can, the level numb
 <li>What you expected to happen, and what happened instead</li>
 <li>A screenshot or screen recording, if you have one</li>
 </ul>
+
+${contact}
+</div>`,
+};
+
+/* ───────────────────────── Data & Account Deletion ───────────────────────── */
+pages['data-deletion.html'] = {
+  title: 'Data & Account Deletion',
+  description:
+    'Data and Account Deletion Policy for Arrow Puzzle Brainly — instructions on deleting stored gameplay data and requesting data removal.',
+  body: `
+<h1>Data &amp; Account Deletion Policy</h1>
+<p class="updated">Last updated: ${UPDATED}</p>
+
+<div class="card">
+<div class="note">
+<strong>Executive Summary:</strong> ${APP} does not require, create, or support user accounts. We do not collect your name, email, phone number, password, or cloud profile. All game progress and preferences are stored strictly on your local device. You can permanently delete 100% of your data at any moment directly from your device without needing developer intervention.
+</div>
+
+<h2>1. User Accounts Status</h2>
+<p><strong>${APP} has no user account system.</strong></p>
+<p>You play without signing up, logging in, or connecting to any social media platform. Because no central user account or cloud profile is ever created, there is no online user profile or account record hosted on our servers to deactivate or delete.</p>
+
+<h2>2. How to Delete All Stored Game Data</h2>
+<p>All your gameplay data — including unlocked levels (up to level 2,200), solve times, stars earned, hint balances, and sound/vibration/theme preferences — is stored locally in your phone's private app sandbox. You can permanently delete this data using any of the three methods below:</p>
+
+<h3>Method A: Inside the Game (Instant Self-Service)</h3>
+<ol>
+<li>Open <strong>${APP}</strong> on your Android device.</li>
+<li>Tap the <strong>Settings</strong> gear icon on the home screen.</li>
+<li>Scroll down to the bottom panel.</li>
+<li>Tap the red button labeled <strong>Reset progress</strong>.</li>
+<li>Confirm your choice on the dialog prompt.</li>
+</ol>
+<p><em>Effect:</em> All progress across all levels, solve records, stars, hint balances, and custom settings are instantly and permanently purged from your device storage, resetting the game back to factory condition.</p>
+
+<h3>Method B: Via Android Device Settings</h3>
+<ol>
+<li>Open your phone's <strong>Settings</strong> app.</li>
+<li>Go to <strong>Apps</strong> (or <em>Apps &amp; Notifications</em> / <em>Manage Apps</em>).</li>
+<li>Locate and tap <strong>${APP}</strong>.</li>
+<li>Tap <strong>Storage &amp; Cache</strong>.</li>
+<li>Tap <strong>Clear Storage</strong> (or <em>Clear Data</em>) and confirm.</li>
+</ol>
+<p><em>Effect:</em> Completely erases all local database records, cache files, and preferences stored by the App.</p>
+
+<h3>Method C: Uninstalling the Game</h3>
+<p>Simply uninstalling ${APP} from your device triggers Android's OS-level package removal, which immediately and irreversibly deletes all sandbox data, preferences, and files associated with package <code>${PACKAGE}</code>.</p>
+
+<h2>3. Advertising Identifier Data (Google AdMob)</h2>
+<p>The App displays advertisements through <strong>Google AdMob</strong>. AdMob may utilize your device's Google Advertising ID (<code>AD_ID</code>) to serve ads, limit frequency, and detect fraud.</p>
+<p>Because advertising IDs are managed by Google Play Services rather than stored on our servers, you can reset or delete this identifier at any time through Android:</p>
+<ul>
+<li>Open Android <strong>Settings → Privacy → Ads</strong> (or <em>Settings → Google → Ads</em>).</li>
+<li>Tap <strong>Delete advertising ID</strong> to permanently remove your device's ad identifier, or tap <strong>Reset advertising ID</strong> to generate a fresh anonymous identifier.</li>
+<li>Optionally, disable <strong>Personalised Ads</strong> on the same screen.</li>
+</ul>
+
+<h2>4. Requesting Deletion of Email Correspondence &amp; Inquiries</h2>
+<p>If you have communicated with us via email (for example, for bug reports, questions, or support inquiries) and wish to have all related emails and personal contact information permanently removed from our records, you may submit a deletion request:</p>
+<ul>
+<li><strong>Email:</strong> Send a request to <a href="mailto:${EMAIL}">${EMAIL}</a></li>
+<li><strong>Subject line:</strong> <code>Data Deletion Request — ${APP}</code></li>
+<li><strong>Details to provide:</strong> The email address used to contact us.</li>
+<li><strong>Processing Time:</strong> We will process your request, permanently purge all email correspondence from our email servers within <strong>30 days</strong>, and send you a final deletion confirmation.</li>
+</ul>
+
+<h2>5. Google Play Data Safety Summary</h2>
+<table>
+<tr><th>Data Type</th><th>Where Stored</th><th>Retention Period</th><th>Deletion Method</th></tr>
+<tr><td>Gameplay Progress &amp; Records</td><td>Local device storage only</td><td>Until user clears data or uninstalls</td><td>In-game "Reset progress", clear app storage, or uninstall</td></tr>
+<tr><td>User Accounts / Passwords</td><td>Not collected / Not created</td><td>None (0 days)</td><td>N/A (no accounts exist)</td></tr>
+<tr><td>Advertising ID (<code>AD_ID</code>)</td><td>Managed by Google Play Services</td><td>Subject to Google Privacy Policy</td><td>Android Settings → Privacy → Ads → Delete advertising ID</td></tr>
+<tr><td>Support Emails &amp; Inquiries</td><td>Secure developer email inbox</td><td>Retained only during correspondence</td><td>Email request to <a href="mailto:${EMAIL}">${EMAIL}</a> (purged within 30 days)</td></tr>
+</table>
 
 ${contact}
 </div>`,
